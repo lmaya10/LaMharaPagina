@@ -40,7 +40,7 @@ Esta aplicación permite a los usuarios obtener el catálogo de productos, así 
 
 MIT License
 
-Copyright (c) 2019 Mateo Devia
+Copyright (c) 2019 Laura Maya
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
