@@ -42,12 +42,14 @@ class App extends Component {
     <Router history={history}>
     <Switch>
     <div className="container-fluid">
+    //Muy interesante que hayan hecho la navbar como un componente, otra opción podría ser incluirla en el index puesto que esta siempre va a estar fija ahí.
     <TopMenu/>
     <Route exact path="/" component={Home}/>
     <Route path="/nuestrosProductos" component={NuestrosProductos} />
     <Route path="/quienesSomos" component={QuienesSomos} />
       <Route path="/signUp" component={SignUp} />
-      <Route path="/login" component={Loginn} />
+      <Route path="/login" component={Loginn} 
+      //Para mejorar la experiencia de usuario sería interesante tener agregar productos en la misma página en donde los muestran.
       <PrivateRoute exact path="/agregarProducto" component={AgregarProducto} />
       <PrivateRoute exact path="/verComentarios" component={VerComentarios} />
     </div>
