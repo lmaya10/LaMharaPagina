@@ -1,9 +1,23 @@
 var express = require("express");
 var router = express.Router();
 
+/**
+* sguzmanm: This file has too much logic in it. You should modularize more your code. Put everything related to products 
+* in one folder, comments in another. Separate RES API callbacks from queries, etc.
+**/
 
+/**
+* sguzmanm: All these connections to the database should be handled in a different folder whose responsibility is to make queries, connections, insertions, etc
+* It is too disorganized to keep it this way. Also you should try to avoid callbacks since it is really hard to understand the code you are doing (at least for me).
+* You should check out async or promises instead.
+*/
 function connectProductos(callback){
+  // sguzmanm: Since we are using ES&, try "let" instead of "var" to avoid hoistering
   var MongoClient = require("mongodb").MongoClient;
+  /*
+  * sguzmanm: This is a terrible practice. Burning out connection keys into your code will allow anyone to connect to your database.
+  * Try to put these connections in an external file ignored in your .gitignore config. A .env or even a .txt should suffice this 
+  */
   var url = "mongodb+srv://admin:admin@lamharadb-yinqm.mongodb.net/test?retryWrites=true&w=majority";
   var client = new MongoClient(url,{useNewUrlParser:true});
 
@@ -120,5 +134,7 @@ router.post("/crearComentario", function(req,res,next) {
 
 
 })
+
+// sguzmanm: At least for the comments resource I would add update functions, and for both resources I would add deletes
 
 module.exports = router;

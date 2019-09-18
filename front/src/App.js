@@ -21,10 +21,12 @@ class App extends Component {
     this.state = {
       productos:[]
     }
+    // sguzmanm: What is window.AppComponent? I do not see doc for this anywhere
     window.AppComponent=this;
   }
 
   componentDidMount(){
+    // sguzmanm: Why are you not handling the error if this fails? Try using catch
     fetch("/productos")
       .then(res => res.json())
       .then(productos => this.setState({
@@ -39,26 +41,28 @@ class App extends Component {
 
   render() {
   return(
+    {/*sguzmanm: Beware of indentation of your code*/}
     <Router history={history}>
-    <Switch>
-    <div className="container-fluid">
-    <TopMenu/>
-    <Route exact path="/" component={Home}/>
-    <Route path="/nuestrosProductos" component={NuestrosProductos} />
-    <Route path="/quienesSomos" component={QuienesSomos} />
-      <Route path="/signUp" component={SignUp} />
-      <Route path="/login" component={Loginn} />
-      <PrivateRoute exact path="/agregarProducto" component={AgregarProducto} />
-      <PrivateRoute exact path="/verComentarios" component={VerComentarios} />
-    </div>
-    <div className="container">
-    </div>
-    </Switch>
+      <Switch>
+        <div className="container-fluid">
+          <TopMenu/>
+          <Route exact path="/" component={Home}/>
+          <Route path="/nuestrosProductos" component={NuestrosProductos} />
+          <Route path="/quienesSomos" component={QuienesSomos} />
+          <Route path="/signUp" component={SignUp} />
+          <Route path="/login" component={Loginn} />
+          <PrivateRoute exact path="/agregarProducto" component={AgregarProducto} />
+          <PrivateRoute exact path="/verComentarios" component={VerComentarios} />
+        </div>
+        <div className="container">
+        </div>
+      </Switch>
     </Router>
     )
   }
 }
 
+/* sguzmanm: Why are you using all this unnecessary functions? Just render the component you exported inside the Route tag*/
 function Home(){
   return(
     <div>

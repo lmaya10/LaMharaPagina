@@ -13,6 +13,7 @@ class VerComentarios extends Component{
   };
 
   componentDidMount(){
+    // sguzmanm: Please handle promise errors with catch
     fetch("/comentarios")
       .then(res => res.json())
       .then(comentarios => this.setState({

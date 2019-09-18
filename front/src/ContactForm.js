@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+// sguzmanm: Two things. Email js is a tech that wasn´t recommeded in the course, so you could add it to the readme. Secondly,
+// why are you using it? Wouldn´t a 'mailto:' route suffice this task? Like this: https://stackoverflow.com/questions/21461589/javascript-mailto-using-window-open
 import * as emailjs from 'emailjs-com'
 
 import { Button, FormFeedback, Form, FormGroup, Label, Input } from 'reactstrap'

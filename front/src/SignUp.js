@@ -1,6 +1,6 @@
 import React from "react";
 import { MDBContainer, MDBRow, MDBCol, MDBBtn, MDBInput } from 'mdbreact';
-
+// sguzmanm: Isn´t there any function or callback for signing up?
 const Signup = () => {
   return (
     <div class="pagination-centered">

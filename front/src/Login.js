@@ -31,6 +31,7 @@ const Login = props => {
             <div className="text-center">
               <MDBBtn
               onClick={()=>{
+                  // sguzmanm: Why are you doing logins without verifying auth?
                   auth.login(()=>{
                     props.history.push("/");
                   });

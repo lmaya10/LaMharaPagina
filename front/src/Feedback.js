@@ -8,6 +8,7 @@ class Feedback extends Component {
       <div className="col-md-12 campoTexto">
         <div className="widget-area no-padding blank">
           <div className="status-upload text-center">
+            {/*sguzmanm: For me please don´t do this. Later it is difficult to change and if you need to do data manipulation its awful. Use a handler function, onclick, callback, nested generator, just not this please*/}
             <form action="/crearComentario" method="POST">
                 <textarea placeholder="¿Tienes algun comentario sobre nuestra pagina? Escribenos para mejorar" name="text" ></textarea>
                 <ul>

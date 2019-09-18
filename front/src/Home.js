@@ -2,6 +2,7 @@ import React from "react";
 import "./Home.css"
 const Home = () => {
 return (
+  {/* Please correct this JSX is just wrong. Wrong indentation, id without values, class instead of className for div*/}
   <div id>
 
         <div class="jumbotron">

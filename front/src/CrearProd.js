@@ -1,12 +1,14 @@
 import React, {Component} from "react";
 import "./CrearProd.css"
+
+// sguzmanm: Why are you using pure CSS here and in other forms, like ContactForm, MDB?
+
 class CrearProd extends Component {
-
-
   render() {
     return (
       <div className="formulario">
         <h1>Crear Nuevo Producto </h1>
+        {/*sguzmanm: For me please don´t do this. Later it is difficult to change and if you need to do data manipulation its awful. Use a handler function, onclick, callback, nested generator, just not this please*/}
         <form className="nuevaInfo" action="/crearProducto" method="POST" >
           <div className ="row">
           Ingrese la siguiente información

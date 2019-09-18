@@ -7,12 +7,12 @@ class Producto extends Component{
     this.state ={
       cantidad: 0
     }
-
     this.comprar = this.comprar.bind(this);
   }
 
   comprar() {
     console.log("Comprar", this);
+    // sguzmanm: What is the purpose of this function if you are not storing nay change on the backend? Once it is reloaded, all values come back to what they used to be
     this.setState({
       cantidad: this.state.cantidad + 1
     });

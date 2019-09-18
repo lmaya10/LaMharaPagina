@@ -32,7 +32,7 @@ server.on("listening", onListening);
 /**
  * Normalize a port into a number, string, or false.
  */
-
+// sguzmanm: Why do you have support for pipes? Is it the deployment by port not enough?
 function normalizePort(val) {
   var port = parseInt(val, 10);
 
@@ -52,7 +52,7 @@ function normalizePort(val) {
 /**
  * Event listener for HTTP server "error" event.
  */
-
+// sguzmanm: Why do you have support for pipes? Is it the deployment by port not enough?
 function onError(error) {
   if (error.syscall !== "listen") {
     throw error;
@@ -80,7 +80,7 @@ function onError(error) {
 /**
  * Event listener for HTTP server "listening" event.
  */
-
+// sguzmanm: Why do you have support for pipes? Is it the deployment by port not enough?
 function onListening() {
   var addr = server.address();
   var bind = typeof addr === "string"

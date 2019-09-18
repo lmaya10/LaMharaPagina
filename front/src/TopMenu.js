@@ -20,6 +20,7 @@ export const TopMenu = props =>{
     <ul className="nav navbar-nav navbar-right">
       <li><Link to="/signUp"><span className="glyphicon glyphicon-user"></span> Sign Up</Link></li>
       <li><Link to="/login"><span className="glyphicon glyphicon-log-in"></span> Login</Link></li>
+      {/*sguzmanm: Logout should only appear if the user is logged in*/}
       <li><Link onClick={()=>{
         auth.logout(()=>{
           props.history.push("/");
